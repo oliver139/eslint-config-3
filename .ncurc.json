@@ -1,0 +1,9 @@
+{
+  "format": "group",
+  "upgrade": true,
+  "interactive": true,
+  "reject": [
+    "typescript",
+    "pnpm"
+  ]
+}

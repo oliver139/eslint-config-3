@@ -1,0 +1,57 @@
+{
+  "name": "@oliver139/eslint-config",
+  "type": "module",
+  "version": "7.0.0",
+  "packageManager": "pnpm@10.33.4",
+  "description": " Oliver's ESLint config preset powered by @antfu/eslint-config",
+  "author": "Oliver Mak <oliver139.working@gmail.com> (https://github.com/oliver139)",
+  "license": "MIT",
+  "homepage": "https://oliver139.github.io/eslint-config-3/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliver139/eslint-config-3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oliver139/eslint-config-3/issues"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "dev": "nlx @eslint/config-inspector --config eslint.config.ts",
+    "build": "tsdown --clean --dts",
+    "lint": "eslint --cache",
+    "lint:fix": "eslint --cache --fix",
+    "prepack": "nr build",
+    "release": "nlx bumpp && pnpm publish",
+    "ncu": "nlx npm-check-updates"
+  },
+  "peerDependencies": {
+    "@antfu/eslint-config": ">=8.1.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^8.2.0",
+    "eslint": "^10.2.0"
+  },
+  "devDependencies": {
+    "@antfu/ni": "latest",
+    "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.21.7",
+    "typescript": "^6.0.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --cache --fix"
+  }
+}
