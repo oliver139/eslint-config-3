@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "prepare": "simple-git-hooks",
-    "dev": "nlx @eslint/config-inspector --config eslint.config.ts",
+    "dev": "nlx @eslint/config-inspector@2 --config eslint.config.ts",
     "build": "tsdown --clean --dts",
     "lint": "eslint --cache",
     "lint:fix": "eslint --cache --fix",
@@ -39,13 +39,13 @@
     "@antfu/eslint-config": ">=8.1.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^8.2.0",
-    "eslint": "^10.2.0"
+    "@antfu/eslint-config": "^8.3.0",
+    "eslint": "^10.3.0"
   },
   "devDependencies": {
     "@antfu/ni": "latest",
     "simple-git-hooks": "^2.13.1",
-    "tsdown": "^0.21.7",
+    "tsdown": "^0.21.10",
     "typescript": "^6.0.2"
   },
   "simple-git-hooks": {

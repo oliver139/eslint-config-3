@@ -1,9 +1,10 @@
-import type { Rules, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { Options } from '.'
 
-export function perfectionistOptions(overrides?: Rules): TypedFlatConfigItem {
+export function perfectionistOptions(option: Options['perfectionist']): Options['perfectionist'] {
+  const { overrides } = typeof option === 'object' ? option : {}
+
   return {
-    name: 'antfu/perfectionist/overrides',
-    rules: {
+    overrides: {
       'perfectionist/sort-imports': ['error', {
         groups: [
           'type-import',
@@ -23,8 +24,8 @@ export function perfectionistOptions(overrides?: Rules): TypedFlatConfigItem {
         partitionByComment: true,
         partitionByNewLine: true,
         type: 'natural',
+        ...overrides,
       }],
-      ...overrides,
     },
   }
 }
