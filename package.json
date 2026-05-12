@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "prepare": "simple-git-hooks",
-    "dev": "nlx @eslint/config-inspector@2 --config eslint.config.ts",
+    "dev": "nlx @eslint/config-inspector --config eslint.config.ts",
     "build": "tsdown --clean --dts",
     "lint": "eslint --cache",
     "lint:fix": "eslint --cache --fix",
