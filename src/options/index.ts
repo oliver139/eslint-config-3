@@ -1,12 +1,15 @@
 import type antfu from '@antfu/eslint-config'
 
+import type { TailwindOptions } from './tailwind'
 import { javascriptOptions } from './javascript'
 import { perfectionistOptions } from './perfectionist'
 import { stylisticOptions } from './stylistic'
+import { tailwindOptions } from './tailwind'
 import { typescriptOptions } from './typescript'
 import { vueOptions } from './vue'
 
-export type Options = NonNullable<Parameters<typeof antfu>[0]>
+export type AntfuFirstPara = Parameters<typeof antfu>[0]
+export type Options = NonNullable<AntfuFirstPara> & { tailwind?: false | TailwindOptions }
 export type UserConfig = Parameters<typeof antfu>[1]
 
 export function options(options: Options = {}, ...userConfigs: UserConfig[]): [Options, ...UserConfig[]] {
@@ -20,14 +23,22 @@ export function options(options: Options = {}, ...userConfigs: UserConfig[]): [O
     ...rest
   } = options
 
-  const result: Parameters<typeof antfu>[0] = {
+  const tailwind = options.tailwind ? tailwindOptions(options.tailwind) : []
+  console.log(`🚀 ~ index.ts:26 ~ options ~ tailwind:`, options.tailwind)
+
+  const result: AntfuFirstPara = {
     javascript: javascriptOptions(javascript),
     typescript: typescriptOptions(typescript),
     vue: vueOptions(vue),
     stylistic: stylisticOptions(stylistic),
     perfectionist: perfectionistOptions(perfectionist),
     ...rest,
+
   }
 
-  return [result, ...userConfigs]
+  return [
+    result,
+    ...tailwind,
+    ...userConfigs,
+  ]
 }
