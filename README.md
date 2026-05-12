@@ -2,6 +2,8 @@
 
 My options of [@antfu/eslint-config](https://github.com/antfu/eslint-config).
 
+The 3rd version of my eslint config preset, which uses overrides to customize instead, so to simplify each time updating it.
+
 [![npm](https://img.shields.io/npm/v/@oliver139/eslint-config?color=010101&style=for-the-badge)](https://npmjs.com/package/@oliver139/eslint-config)
 
 ## Install
