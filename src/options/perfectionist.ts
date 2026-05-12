@@ -24,8 +24,8 @@ export function perfectionistOptions(option: Options['perfectionist']): Options[
         partitionByComment: true,
         partitionByNewLine: true,
         type: 'natural',
-        ...overrides,
       }],
+      ...overrides,
     },
   }
 }
