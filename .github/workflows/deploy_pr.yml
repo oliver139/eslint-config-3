@@ -30,9 +30,7 @@ jobs:
           cache: pnpm
 
       - name: Install deps
-        run: |
-          pnpm config set only-built-dependencies esbuild
-          pnpm install
+        run: pnpm install
 
       - name: Build the project
         run: pnpm build
@@ -45,5 +43,5 @@ jobs:
         with:
           # github will auto-generate a token for this job and use it
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.eslint-config-inspector
+          publish_dir: ./dist/__eslint-config-inspector
           publish_branch: config-preview
