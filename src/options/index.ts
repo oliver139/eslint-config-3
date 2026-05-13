@@ -24,7 +24,6 @@ export function options(options: Options = {}, ...userConfigs: UserConfig[]): [O
   } = options
 
   const tailwind = options.tailwind ? tailwindOptions(options.tailwind) : []
-  console.log(`🚀 ~ index.ts:26 ~ options ~ tailwind:`, options.tailwind)
 
   const result: AntfuFirstPara = {
     javascript: javascriptOptions(javascript),
