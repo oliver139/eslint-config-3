@@ -36,11 +36,14 @@
     "ncu": "nlx npm-check-updates"
   },
   "peerDependencies": {
-    "@antfu/eslint-config": ">=8.1.0"
+    "@antfu/eslint-config": ">=8.1.0",
+    "eslint-plugin-better-tailwindcss": ">=4.5.0"
   },
   "dependencies": {
     "@antfu/eslint-config": "^8.3.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.3.0"
+  },
+  "optionalDependencies": {
     "eslint-plugin-better-tailwindcss": "^4.5.0"
   },
   "devDependencies": {
