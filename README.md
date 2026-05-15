@@ -10,7 +10,7 @@ Tailwind linting is supported using [`eslint-plugin-better-tailwindcss`](https:/
 
 ## Install
 
-```bash
+```sh
 npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config
 ```
 
@@ -30,6 +30,10 @@ export default antfu(...options({
 ### Tailwind
 
 Powered by [`eslint-plugin-better-tailwindcss`](https://github.com/schoero/eslint-plugin-better-tailwindcss)
+
+```sh
+npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config eslint-plugin-better-tailwindcss
+```
 
 ```ts
 import antfu from '@antfu/eslint-config'
@@ -53,10 +57,17 @@ export default antfu(...options({
 
 ### Nuxt
 
+Powered by [Nuxt ESLint module](https://eslint.nuxt.com/packages/module)
+
+```sh
+npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config
+npx nuxi module add eslint
+```
+
 ```ts
 import antfu from '@antfu/eslint-config'
 import { options } from '@oliver139/eslint-config'
-import withNuxt from './.nuxt/eslint.config.mjs'
+import nuxt from './.nuxt/eslint.config.mjs'
 
-export default antfu(...options()).append(withNuxt())
+export default antfu(...options()).append(nuxt())
 ```
