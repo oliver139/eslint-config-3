@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@antfu/eslint-config':
-        specifier: ^8.3.0
-        version: 8.3.0(@typescript-eslint/rule-tester@8.58.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.59.3(typescript@6.0.2))(@typescript-eslint/utils@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)
       eslint:
         specifier: ^10.3.0
         version: 10.3.0(jiti@2.7.0)
@@ -28,6 +25,9 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2
     optionalDependencies:
+      '@antfu/eslint-config':
+        specifier: ^8.3.0
+        version: 8.3.0(@typescript-eslint/rule-tester@8.58.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.59.3(typescript@6.0.2))(@typescript-eslint/utils@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)
       eslint-plugin-better-tailwindcss:
         specifier: ^4.5.0
         version: 4.5.0(eslint@10.3.0(jiti@2.7.0))(tailwindcss@4.3.0)(typescript@6.0.2)
@@ -1859,11 +1859,13 @@ snapshots:
       - ts-declaration-location
       - typescript
       - vitest
+    optional: true
 
   '@antfu/install-pkg@1.1.0':
     dependencies:
       package-manager-detector: 1.6.0
       tinyexec: 1.1.1
+    optional: true
 
   '@antfu/ni@30.1.0':
     dependencies:
@@ -1881,17 +1883,20 @@ snapshots:
       '@types/jsesc': 2.5.1
       jsesc: 3.1.0
 
-  '@babel/helper-string-parser@7.27.1': {}
+  '@babel/helper-string-parser@7.27.1':
+    optional: true
 
   '@babel/helper-string-parser@8.0.0-rc.3': {}
 
-  '@babel/helper-validator-identifier@7.28.5': {}
+  '@babel/helper-validator-identifier@7.28.5':
+    optional: true
 
   '@babel/helper-validator-identifier@8.0.0-rc.3': {}
 
   '@babel/parser@7.29.2':
     dependencies:
       '@babel/types': 7.29.0
+    optional: true
 
   '@babel/parser@8.0.0-rc.3':
     dependencies:
@@ -1901,6 +1906,7 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
+    optional: true
 
   '@babel/types@8.0.0-rc.3':
     dependencies:
@@ -1911,6 +1917,7 @@ snapshots:
     dependencies:
       fast-wrap-ansi: 0.2.0
       sisteransi: 1.0.5
+    optional: true
 
   '@clack/prompts@1.3.0':
     dependencies:
@@ -1918,6 +1925,7 @@ snapshots:
       fast-string-width: 3.0.2
       fast-wrap-ansi: 0.2.0
       sisteransi: 1.0.5
+    optional: true
 
   '@e18e/eslint-plugin@0.4.1(eslint@10.3.0(jiti@2.7.0))':
     dependencies:
@@ -1926,6 +1934,7 @@ snapshots:
       semver: 7.7.4
     optionalDependencies:
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   '@emnapi/core@1.10.0':
     dependencies:
@@ -1950,6 +1959,7 @@ snapshots:
       comment-parser: 1.4.5
       esquery: 1.7.0
       jsdoc-type-pratt-parser: 7.1.1
+    optional: true
 
   '@es-joy/jsdoccomment@0.86.0':
     dependencies:
@@ -1958,14 +1968,17 @@ snapshots:
       comment-parser: 1.4.6
       esquery: 1.7.0
       jsdoc-type-pratt-parser: 7.2.0
+    optional: true
 
-  '@es-joy/resolve.exports@1.2.0': {}
+  '@es-joy/resolve.exports@1.2.0':
+    optional: true
 
   '@eslint-community/eslint-plugin-eslint-comments@4.7.1(eslint@10.3.0(jiti@2.7.0))':
     dependencies:
       escape-string-regexp: 4.0.0
       eslint: 10.3.0(jiti@2.7.0)
       ignore: 7.0.5
+    optional: true
 
   '@eslint-community/eslint-utils@4.9.1(eslint@10.3.0(jiti@2.7.0))':
     dependencies:
@@ -1979,6 +1992,7 @@ snapshots:
       '@eslint/core': 1.2.1
     optionalDependencies:
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   '@eslint/config-array@0.23.5':
     dependencies:
@@ -2017,6 +2031,7 @@ snapshots:
       micromark-util-normalize-identifier: 2.0.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@eslint/object-schema@3.0.5': {}
 
@@ -2024,6 +2039,7 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
+    optional: true
 
   '@eslint/plugin-kit@0.7.1':
     dependencies:
@@ -2062,13 +2078,15 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@ota-meshi/ast-token-store@0.3.0': {}
+  '@ota-meshi/ast-token-store@0.3.0':
+    optional: true
 
   '@oxc-project/types@0.127.0': {}
 
   '@oxc-project/types@0.129.0': {}
 
-  '@pkgr/core@0.2.9': {}
+  '@pkgr/core@0.2.9':
+    optional: true
 
   '@quansync/fs@1.0.0':
     dependencies:
@@ -2176,7 +2194,8 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-rc.17': {}
 
-  '@sindresorhus/base62@1.0.0': {}
+  '@sindresorhus/base62@1.0.0':
+    optional: true
 
   '@stylistic/eslint-plugin@5.10.0(eslint@10.3.0(jiti@2.7.0))':
     dependencies:
@@ -2187,6 +2206,7 @@ snapshots:
       espree: 10.4.0
       estraverse: 5.3.0
       picomatch: 4.0.4
+    optional: true
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
@@ -2196,6 +2216,7 @@ snapshots:
   '@types/debug@4.1.13':
     dependencies:
       '@types/ms': 2.1.0
+    optional: true
 
   '@types/esrecurse@4.3.1': {}
 
@@ -2204,20 +2225,25 @@ snapshots:
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.3
+    optional: true
 
   '@types/jsesc@2.5.1': {}
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/katex@0.16.8': {}
+  '@types/katex@0.16.8':
+    optional: true
 
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
+    optional: true
 
-  '@types/ms@2.1.0': {}
+  '@types/ms@2.1.0':
+    optional: true
 
-  '@types/unist@3.0.3': {}
+  '@types/unist@3.0.3':
+    optional: true
 
   '@typescript-eslint/eslint-plugin@8.59.3(@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2234,6 +2260,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/parser@8.58.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2246,6 +2273,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2258,6 +2286,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/project-service@8.58.1(typescript@6.0.2)':
     dependencies:
@@ -2267,6 +2296,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/project-service@8.59.3(typescript@6.0.2)':
     dependencies:
@@ -2276,6 +2306,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/rule-tester@8.58.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2290,24 +2321,29 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    optional: true
 
   '@typescript-eslint/scope-manager@8.58.1':
     dependencies:
       '@typescript-eslint/types': 8.58.1
       '@typescript-eslint/visitor-keys': 8.58.1
+    optional: true
 
   '@typescript-eslint/scope-manager@8.59.3':
     dependencies:
       '@typescript-eslint/types': 8.59.3
       '@typescript-eslint/visitor-keys': 8.59.3
+    optional: true
 
   '@typescript-eslint/tsconfig-utils@8.58.1(typescript@6.0.2)':
     dependencies:
       typescript: 6.0.2
+    optional: true
 
   '@typescript-eslint/tsconfig-utils@8.59.3(typescript@6.0.2)':
     dependencies:
       typescript: 6.0.2
+    optional: true
 
   '@typescript-eslint/type-utils@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2320,10 +2356,13 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
-  '@typescript-eslint/types@8.58.1': {}
+  '@typescript-eslint/types@8.58.1':
+    optional: true
 
-  '@typescript-eslint/types@8.59.3': {}
+  '@typescript-eslint/types@8.59.3':
+    optional: true
 
   '@typescript-eslint/typescript-estree@8.58.1(typescript@6.0.2)':
     dependencies:
@@ -2339,6 +2378,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/typescript-estree@8.59.3(typescript@6.0.2)':
     dependencies:
@@ -2354,6 +2394,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/utils@8.58.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2365,6 +2406,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/utils@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)':
     dependencies:
@@ -2376,16 +2418,19 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/visitor-keys@8.58.1':
     dependencies:
       '@typescript-eslint/types': 8.58.1
       eslint-visitor-keys: 5.0.1
+    optional: true
 
   '@typescript-eslint/visitor-keys@8.59.3':
     dependencies:
       '@typescript-eslint/types': 8.59.3
       eslint-visitor-keys: 5.0.1
+    optional: true
 
   '@valibot/to-json-schema@1.7.0(valibot@1.4.0(typescript@6.0.2))':
     dependencies:
@@ -2402,6 +2447,7 @@ snapshots:
       typescript: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@vue/compiler-core@3.5.32':
     dependencies:
@@ -2410,11 +2456,13 @@ snapshots:
       entities: 7.0.1
       estree-walker: 2.0.2
       source-map-js: 1.2.1
+    optional: true
 
   '@vue/compiler-dom@3.5.32':
     dependencies:
       '@vue/compiler-core': 3.5.32
       '@vue/shared': 3.5.32
+    optional: true
 
   '@vue/compiler-sfc@3.5.32':
     dependencies:
@@ -2427,13 +2475,16 @@ snapshots:
       magic-string: 0.30.21
       postcss: 8.5.9
       source-map-js: 1.2.1
+    optional: true
 
   '@vue/compiler-ssr@3.5.32':
     dependencies:
       '@vue/compiler-dom': 3.5.32
       '@vue/shared': 3.5.32
+    optional: true
 
-  '@vue/shared@3.5.32': {}
+  '@vue/shared@3.5.32':
+    optional: true
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
@@ -2455,7 +2506,8 @@ snapshots:
 
   ansis@4.2.0: {}
 
-  are-docs-informative@0.0.2: {}
+  are-docs-informative@0.0.2:
+    optional: true
 
   ast-kit@3.0.0-beta.1:
     dependencies:
@@ -2465,11 +2517,13 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.10.18: {}
+  baseline-browser-mapping@2.10.18:
+    optional: true
 
   birpc@4.0.0: {}
 
-  boolbase@1.0.0: {}
+  boolbase@1.0.0:
+    optional: true
 
   brace-expansion@5.0.5:
     dependencies:
@@ -2482,14 +2536,18 @@ snapshots:
       electron-to-chromium: 1.5.335
       node-releases: 2.0.37
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
+    optional: true
 
-  builtin-modules@5.0.0: {}
+  builtin-modules@5.0.0:
+    optional: true
 
   cac@7.0.0: {}
 
-  caniuse-lite@1.0.30001787: {}
+  caniuse-lite@1.0.30001787:
+    optional: true
 
-  ccount@2.0.1: {}
+  ccount@2.0.1:
+    optional: true
 
   chalk@4.1.2:
     dependencies:
@@ -2497,15 +2555,19 @@ snapshots:
       supports-color: 7.2.0
     optional: true
 
-  change-case@5.4.4: {}
+  change-case@5.4.4:
+    optional: true
 
-  character-entities@2.0.2: {}
+  character-entities@2.0.2:
+    optional: true
 
-  ci-info@4.4.0: {}
+  ci-info@4.4.0:
+    optional: true
 
   clean-regexp@1.0.0:
     dependencies:
       escape-string-regexp: 1.0.5
+    optional: true
 
   color-convert@2.0.1:
     dependencies:
@@ -2515,19 +2577,25 @@ snapshots:
   color-name@1.1.4:
     optional: true
 
-  commander@8.3.0: {}
+  commander@8.3.0:
+    optional: true
 
-  comment-parser@1.4.5: {}
+  comment-parser@1.4.5:
+    optional: true
 
-  comment-parser@1.4.6: {}
+  comment-parser@1.4.6:
+    optional: true
 
-  confbox@0.1.8: {}
+  confbox@0.1.8:
+    optional: true
 
-  confbox@0.2.4: {}
+  confbox@0.2.4:
+    optional: true
 
   core-js-compat@3.49.0:
     dependencies:
       browserslist: 4.28.2
+    optional: true
 
   cross-spawn@7.0.6:
     dependencies:
@@ -2535,7 +2603,8 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  cssesc@3.0.0: {}
+  cssesc@3.0.0:
+    optional: true
 
   debug@4.4.3:
     dependencies:
@@ -2544,22 +2613,27 @@ snapshots:
   decode-named-character-reference@1.3.0:
     dependencies:
       character-entities: 2.0.2
+    optional: true
 
   deep-is@0.1.4: {}
 
   defu@6.1.7: {}
 
-  dequal@2.0.3: {}
+  dequal@2.0.3:
+    optional: true
 
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
+    optional: true
 
-  diff-sequences@29.6.3: {}
+  diff-sequences@29.6.3:
+    optional: true
 
   dts-resolver@2.1.3: {}
 
-  electron-to-chromium@1.5.335: {}
+  electron-to-chromium@1.5.335:
+    optional: true
 
   empathic@2.0.0: {}
 
@@ -2567,45 +2641,56 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.2
+    optional: true
 
-  entities@7.0.1: {}
+  entities@7.0.1:
+    optional: true
 
-  escalade@3.2.0: {}
+  escalade@3.2.0:
+    optional: true
 
-  escape-string-regexp@1.0.5: {}
+  escape-string-regexp@1.0.5:
+    optional: true
 
   escape-string-regexp@4.0.0: {}
 
-  escape-string-regexp@5.0.0: {}
+  escape-string-regexp@5.0.0:
+    optional: true
 
   eslint-compat-utils@0.5.1(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
       semver: 7.7.4
+    optional: true
 
   eslint-config-flat-gitignore@2.3.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       '@eslint/compat': 2.0.5(eslint@10.3.0(jiti@2.7.0))
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-flat-config-utils@3.2.0:
     dependencies:
       '@eslint/config-helpers': 0.5.5
       pathe: 2.0.3
+    optional: true
 
   eslint-json-compat-utils@0.2.3(eslint@10.3.0(jiti@2.7.0))(jsonc-eslint-parser@3.1.0):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
       esquery: 1.7.0
       jsonc-eslint-parser: 3.1.0
+    optional: true
 
   eslint-merge-processors@2.0.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-plugin-antfu@3.2.3(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-plugin-better-tailwindcss@4.5.0(eslint@10.3.0(jiti@2.7.0))(tailwindcss@4.3.0)(typescript@6.0.2):
     dependencies:
@@ -2632,6 +2717,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 8.59.3(typescript@6.0.2)
       '@typescript-eslint/utils': 8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-plugin-es-x@7.8.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2639,10 +2725,12 @@ snapshots:
       '@eslint-community/regexpp': 4.12.2
       eslint: 10.3.0(jiti@2.7.0)
       eslint-compat-utils: 0.5.1(eslint@10.3.0(jiti@2.7.0))
+    optional: true
 
   eslint-plugin-import-lite@0.6.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-plugin-jsdoc@62.9.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2663,6 +2751,7 @@ snapshots:
       to-valid-identifier: 1.0.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   eslint-plugin-jsonc@3.1.2(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2678,6 +2767,7 @@ snapshots:
       synckit: 0.11.12
     transitivePeerDependencies:
       - '@eslint/json'
+    optional: true
 
   eslint-plugin-n@18.0.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2):
     dependencies:
@@ -2692,8 +2782,10 @@ snapshots:
       semver: 7.7.4
     optionalDependencies:
       typescript: 6.0.2
+    optional: true
 
-  eslint-plugin-no-only-tests@3.4.0: {}
+  eslint-plugin-no-only-tests@3.4.0:
+    optional: true
 
   eslint-plugin-perfectionist@5.9.0(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2):
     dependencies:
@@ -2703,6 +2795,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    optional: true
 
   eslint-plugin-pnpm@1.6.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2714,6 +2807,7 @@ snapshots:
       tinyglobby: 0.2.16
       yaml: 2.8.3
       yaml-eslint-parser: 2.0.0
+    optional: true
 
   eslint-plugin-regexp@3.1.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2725,6 +2819,7 @@ snapshots:
       refa: 0.12.1
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
+    optional: true
 
   eslint-plugin-toml@1.3.1(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2736,6 +2831,7 @@ snapshots:
       toml-eslint-parser: 1.0.3
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   eslint-plugin-unicorn@64.0.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2756,12 +2852,14 @@ snapshots:
       regjsparser: 0.13.1
       semver: 7.7.4
       strip-indent: 4.1.1
+    optional: true
 
   eslint-plugin-unused-imports@4.4.1(@typescript-eslint/eslint-plugin@8.59.3(@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.3.0(jiti@2.7.0)
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.59.3(@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)
+    optional: true
 
   eslint-plugin-vue@10.9.1(@stylistic/eslint-plugin@5.10.0(eslint@10.3.0(jiti@2.7.0)))(@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2))(eslint@10.3.0(jiti@2.7.0))(vue-eslint-parser@10.4.0(eslint@10.3.0(jiti@2.7.0))):
     dependencies:
@@ -2776,6 +2874,7 @@ snapshots:
     optionalDependencies:
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.3.0(jiti@2.7.0))
       '@typescript-eslint/parser': 8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.2)
+    optional: true
 
   eslint-plugin-yml@3.3.2(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2787,11 +2886,13 @@ snapshots:
       eslint: 10.3.0(jiti@2.7.0)
       natural-compare: 1.4.0
       yaml-eslint-parser: 2.0.0
+    optional: true
 
   eslint-processor-vue-blocks@2.0.0(@vue/compiler-sfc@3.5.32)(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
       '@vue/compiler-sfc': 3.5.32
       eslint: 10.3.0(jiti@2.7.0)
+    optional: true
 
   eslint-scope@9.1.2:
     dependencies:
@@ -2802,7 +2903,8 @@ snapshots:
 
   eslint-visitor-keys@3.4.3: {}
 
-  eslint-visitor-keys@4.2.1: {}
+  eslint-visitor-keys@4.2.1:
+    optional: true
 
   eslint-visitor-keys@5.0.1: {}
 
@@ -2848,6 +2950,7 @@ snapshots:
       acorn: 8.16.0
       acorn-jsx: 5.3.2(acorn@8.16.0)
       eslint-visitor-keys: 4.2.1
+    optional: true
 
   espree@11.2.0:
     dependencies:
@@ -2865,7 +2968,8 @@ snapshots:
 
   estraverse@5.3.0: {}
 
-  estree-walker@2.0.2: {}
+  estree-walker@2.0.2:
+    optional: true
 
   estree-walker@3.0.3:
     dependencies:
@@ -2873,7 +2977,8 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  exsolve@1.0.8: {}
+  exsolve@1.0.8:
+    optional: true
 
   fast-deep-equal@3.1.3: {}
 
@@ -2881,19 +2986,23 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fast-string-truncated-width@3.0.3: {}
+  fast-string-truncated-width@3.0.3:
+    optional: true
 
   fast-string-width@3.0.2:
     dependencies:
       fast-string-truncated-width: 3.0.3
+    optional: true
 
   fast-wrap-ansi@0.2.0:
     dependencies:
       fast-string-width: 3.0.2
+    optional: true
 
   fault@2.0.1:
     dependencies:
       format: 0.2.2
+    optional: true
 
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
@@ -2903,7 +3012,8 @@ snapshots:
     dependencies:
       flat-cache: 4.0.1
 
-  find-up-simple@1.0.1: {}
+  find-up-simple@1.0.1:
+    optional: true
 
   find-up@5.0.0:
     dependencies:
@@ -2917,7 +3027,8 @@ snapshots:
 
   flatted@3.4.2: {}
 
-  format@0.2.2: {}
+  format@0.2.2:
+    optional: true
 
   fzf@0.5.2: {}
 
@@ -2925,40 +3036,49 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  github-slugger@2.0.0: {}
+  github-slugger@2.0.0:
+    optional: true
 
   glob-parent@6.0.2:
     dependencies:
       is-glob: 4.0.3
 
-  globals@15.15.0: {}
+  globals@15.15.0:
+    optional: true
 
-  globals@17.6.0: {}
+  globals@17.6.0:
+    optional: true
 
-  globrex@0.1.2: {}
+  globrex@0.1.2:
+    optional: true
 
-  graceful-fs@4.2.11: {}
+  graceful-fs@4.2.11:
+    optional: true
 
   has-flag@4.0.0:
     optional: true
 
   hookable@6.1.1: {}
 
-  html-entities@2.6.0: {}
+  html-entities@2.6.0:
+    optional: true
 
   ignore@5.3.2: {}
 
-  ignore@7.0.5: {}
+  ignore@7.0.5:
+    optional: true
 
   import-without-cache@0.3.3: {}
 
   imurmurhash@0.1.4: {}
 
-  indent-string@5.0.0: {}
+  indent-string@5.0.0:
+    optional: true
 
   is-builtin-module@5.0.0:
     dependencies:
       builtin-modules: 5.0.0
+    optional: true
 
   is-extglob@2.1.1: {}
 
@@ -2971,9 +3091,11 @@ snapshots:
   jiti@2.7.0:
     optional: true
 
-  jsdoc-type-pratt-parser@7.1.1: {}
+  jsdoc-type-pratt-parser@7.1.1:
+    optional: true
 
-  jsdoc-type-pratt-parser@7.2.0: {}
+  jsdoc-type-pratt-parser@7.2.0:
+    optional: true
 
   jsesc@3.1.0: {}
 
@@ -2991,10 +3113,12 @@ snapshots:
       acorn: 8.16.0
       eslint-visitor-keys: 5.0.1
       semver: 7.7.4
+    optional: true
 
   katex@0.16.45:
     dependencies:
       commander: 8.3.0
+    optional: true
 
   keyv@4.5.4:
     dependencies:
@@ -3010,20 +3134,25 @@ snapshots:
       mlly: 1.8.2
       pkg-types: 2.3.0
       quansync: 0.2.11
+    optional: true
 
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
 
-  lodash.merge@4.6.2: {}
+  lodash.merge@4.6.2:
+    optional: true
 
-  longest-streak@3.1.0: {}
+  longest-streak@3.1.0:
+    optional: true
 
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+    optional: true
 
-  markdown-table@3.0.4: {}
+  markdown-table@3.0.4:
+    optional: true
 
   mdast-util-find-and-replace@3.0.2:
     dependencies:
@@ -3031,6 +3160,7 @@ snapshots:
       escape-string-regexp: 5.0.0
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
+    optional: true
 
   mdast-util-from-markdown@2.0.3:
     dependencies:
@@ -3048,6 +3178,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-frontmatter@2.0.1:
     dependencies:
@@ -3059,6 +3190,7 @@ snapshots:
       micromark-extension-frontmatter: 2.0.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-gfm-autolink-literal@2.0.1:
     dependencies:
@@ -3067,6 +3199,7 @@ snapshots:
       devlop: 1.1.0
       mdast-util-find-and-replace: 3.0.2
       micromark-util-character: 2.1.1
+    optional: true
 
   mdast-util-gfm-footnote@2.1.0:
     dependencies:
@@ -3077,6 +3210,7 @@ snapshots:
       micromark-util-normalize-identifier: 2.0.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-gfm-strikethrough@2.0.0:
     dependencies:
@@ -3085,6 +3219,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-gfm-table@2.0.0:
     dependencies:
@@ -3095,6 +3230,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-gfm-task-list-item@2.0.0:
     dependencies:
@@ -3104,6 +3240,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-gfm@3.1.0:
     dependencies:
@@ -3116,6 +3253,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-math@3.0.0:
     dependencies:
@@ -3128,11 +3266,13 @@ snapshots:
       unist-util-remove-position: 5.0.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   mdast-util-phrasing@4.1.0:
     dependencies:
       '@types/mdast': 4.0.4
       unist-util-is: 6.0.1
+    optional: true
 
   mdast-util-to-markdown@2.1.2:
     dependencies:
@@ -3145,10 +3285,12 @@ snapshots:
       micromark-util-decode-string: 2.0.1
       unist-util-visit: 5.1.0
       zwitch: 2.0.4
+    optional: true
 
   mdast-util-to-string@4.0.0:
     dependencies:
       '@types/mdast': 4.0.4
+    optional: true
 
   mdn-data@2.28.0:
     optional: true
@@ -3171,6 +3313,7 @@ snapshots:
       micromark-util-subtokenize: 2.1.0
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-frontmatter@2.0.0:
     dependencies:
@@ -3178,6 +3321,7 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-autolink-literal@2.1.0:
     dependencies:
@@ -3185,6 +3329,7 @@ snapshots:
       micromark-util-sanitize-uri: 2.0.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-footnote@2.1.0:
     dependencies:
@@ -3196,6 +3341,7 @@ snapshots:
       micromark-util-sanitize-uri: 2.0.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-strikethrough@2.1.0:
     dependencies:
@@ -3205,6 +3351,7 @@ snapshots:
       micromark-util-resolve-all: 2.0.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-table@2.1.1:
     dependencies:
@@ -3213,10 +3360,12 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-tagfilter@2.0.0:
     dependencies:
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm-task-list-item@2.1.0:
     dependencies:
@@ -3225,6 +3374,7 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-gfm@3.0.0:
     dependencies:
@@ -3236,6 +3386,7 @@ snapshots:
       micromark-extension-gfm-task-list-item: 2.1.0
       micromark-util-combine-extensions: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-extension-math@3.1.0:
     dependencies:
@@ -3246,12 +3397,14 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-factory-destination@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-factory-label@2.0.1:
     dependencies:
@@ -3259,11 +3412,13 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-factory-space@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-factory-title@2.0.1:
     dependencies:
@@ -3271,6 +3426,7 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-factory-whitespace@2.0.1:
     dependencies:
@@ -3278,30 +3434,36 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-util-character@2.1.1:
     dependencies:
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-util-chunked@2.0.1:
     dependencies:
       micromark-util-symbol: 2.0.1
+    optional: true
 
   micromark-util-classify-character@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-util-combine-extensions@2.0.1:
     dependencies:
       micromark-util-chunked: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-util-decode-numeric-character-reference@2.0.2:
     dependencies:
       micromark-util-symbol: 2.0.1
+    optional: true
 
   micromark-util-decode-string@2.0.1:
     dependencies:
@@ -3309,24 +3471,30 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-symbol: 2.0.1
+    optional: true
 
-  micromark-util-encode@2.0.1: {}
+  micromark-util-encode@2.0.1:
+    optional: true
 
-  micromark-util-html-tag-name@2.0.1: {}
+  micromark-util-html-tag-name@2.0.1:
+    optional: true
 
   micromark-util-normalize-identifier@2.0.1:
     dependencies:
       micromark-util-symbol: 2.0.1
+    optional: true
 
   micromark-util-resolve-all@2.0.1:
     dependencies:
       micromark-util-types: 2.0.2
+    optional: true
 
   micromark-util-sanitize-uri@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-encode: 2.0.1
       micromark-util-symbol: 2.0.1
+    optional: true
 
   micromark-util-subtokenize@2.1.0:
     dependencies:
@@ -3334,10 +3502,13 @@ snapshots:
       micromark-util-chunked: 2.0.1
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.2
+    optional: true
 
-  micromark-util-symbol@2.0.1: {}
+  micromark-util-symbol@2.0.1:
+    optional: true
 
-  micromark-util-types@2.0.2: {}
+  micromark-util-types@2.0.2:
+    optional: true
 
   micromark@4.0.2:
     dependencies:
@@ -3360,6 +3531,7 @@ snapshots:
       micromark-util-types: 2.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   minimatch@10.2.5:
     dependencies:
@@ -3374,24 +3546,31 @@ snapshots:
       pathe: 2.0.3
       pkg-types: 1.3.1
       ufo: 1.6.3
+    optional: true
 
-  module-replacements@3.0.0-beta.7: {}
+  module-replacements@3.0.0-beta.7:
+    optional: true
 
   ms@2.1.3: {}
 
-  nanoid@3.3.11: {}
+  nanoid@3.3.11:
+    optional: true
 
   natural-compare@1.4.0: {}
 
-  natural-orderby@5.0.0: {}
+  natural-orderby@5.0.0:
+    optional: true
 
-  node-releases@2.0.37: {}
+  node-releases@2.0.37:
+    optional: true
 
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+    optional: true
 
-  object-deep-merge@2.0.0: {}
+  object-deep-merge@2.0.0:
+    optional: true
 
   obug@2.1.1: {}
 
@@ -3414,13 +3593,16 @@ snapshots:
 
   package-manager-detector@1.6.0: {}
 
-  parse-gitignore@2.0.0: {}
+  parse-gitignore@2.0.0:
+    optional: true
 
   parse-imports-exports@0.2.4:
     dependencies:
       parse-statements: 1.0.11
+    optional: true
 
-  parse-statements@1.0.11: {}
+  parse-statements@1.0.11:
+    optional: true
 
   path-exists@4.0.0: {}
 
@@ -3428,7 +3610,8 @@ snapshots:
 
   pathe@2.0.3: {}
 
-  picocolors@1.1.1: {}
+  picocolors@1.1.1:
+    optional: true
 
   picomatch@4.0.4: {}
 
@@ -3437,54 +3620,66 @@ snapshots:
       confbox: 0.1.8
       mlly: 1.8.2
       pathe: 2.0.3
+    optional: true
 
   pkg-types@2.3.0:
     dependencies:
       confbox: 0.2.4
       exsolve: 1.0.8
       pathe: 2.0.3
+    optional: true
 
-  pluralize@8.0.0: {}
+  pluralize@8.0.0:
+    optional: true
 
   pnpm-workspace-yaml@1.6.0:
     dependencies:
       yaml: 2.8.3
+    optional: true
 
   postcss-selector-parser@7.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
+    optional: true
 
   postcss@8.5.9:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+    optional: true
 
   prelude-ls@1.2.1: {}
 
   punycode@2.3.1: {}
 
-  quansync@0.2.11: {}
+  quansync@0.2.11:
+    optional: true
 
   quansync@1.0.0: {}
 
   refa@0.12.1:
     dependencies:
       '@eslint-community/regexpp': 4.12.2
+    optional: true
 
   regexp-ast-analysis@0.7.1:
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       refa: 0.12.1
+    optional: true
 
-  regexp-tree@0.1.27: {}
+  regexp-tree@0.1.27:
+    optional: true
 
   regjsparser@0.13.1:
     dependencies:
       jsesc: 3.1.0
+    optional: true
 
-  reserved-identifiers@1.2.0: {}
+  reserved-identifiers@1.2.0:
+    optional: true
 
   resolve-pkg-maps@1.0.0: {}
 
@@ -3553,6 +3748,7 @@ snapshots:
       '@eslint-community/regexpp': 4.12.2
       refa: 0.12.1
       regexp-ast-analysis: 0.7.1
+    optional: true
 
   semver@7.7.4: {}
 
@@ -3564,23 +3760,29 @@ snapshots:
 
   simple-git-hooks@2.13.1: {}
 
-  sisteransi@1.0.5: {}
+  sisteransi@1.0.5:
+    optional: true
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.1:
+    optional: true
 
-  spdx-exceptions@2.5.0: {}
+  spdx-exceptions@2.5.0:
+    optional: true
 
   spdx-expression-parse@4.0.0:
     dependencies:
       spdx-exceptions: 2.5.0
       spdx-license-ids: 3.0.23
+    optional: true
 
-  spdx-license-ids@3.0.23: {}
+  spdx-license-ids@3.0.23:
+    optional: true
 
   strip-bom@3.0.0:
     optional: true
 
-  strip-indent@4.1.1: {}
+  strip-indent@4.1.1:
+    optional: true
 
   supports-color@7.2.0:
     dependencies:
@@ -3590,6 +3792,7 @@ snapshots:
   synckit@0.11.12:
     dependencies:
       '@pkgr/core': 0.2.9
+    optional: true
 
   tailwind-csstree@0.3.1:
     optional: true
@@ -3597,7 +3800,8 @@ snapshots:
   tailwindcss@4.3.0:
     optional: true
 
-  tapable@2.3.2: {}
+  tapable@2.3.2:
+    optional: true
 
   tinyexec@1.1.1: {}
 
@@ -3610,16 +3814,19 @@ snapshots:
     dependencies:
       '@sindresorhus/base62': 1.0.0
       reserved-identifiers: 1.2.0
+    optional: true
 
   toml-eslint-parser@1.0.3:
     dependencies:
       eslint-visitor-keys: 5.0.1
+    optional: true
 
   tree-kill@1.2.2: {}
 
   ts-api-utils@2.5.0(typescript@6.0.2):
     dependencies:
       typescript: 6.0.2
+    optional: true
 
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
@@ -3672,7 +3879,8 @@ snapshots:
 
   typescript@6.0.2: {}
 
-  ufo@1.6.3: {}
+  ufo@1.6.3:
+    optional: true
 
   unconfig-core@7.5.0:
     dependencies:
@@ -3682,26 +3890,31 @@ snapshots:
   unist-util-is@6.0.1:
     dependencies:
       '@types/unist': 3.0.3
+    optional: true
 
   unist-util-remove-position@5.0.0:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-visit: 5.1.0
+    optional: true
 
   unist-util-stringify-position@4.0.0:
     dependencies:
       '@types/unist': 3.0.3
+    optional: true
 
   unist-util-visit-parents@6.0.2:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.1
+    optional: true
 
   unist-util-visit@5.1.0:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
+    optional: true
 
   unrun@0.2.38(synckit@0.11.12):
     dependencies:
@@ -3714,12 +3927,14 @@ snapshots:
       browserslist: 4.28.2
       escalade: 3.2.0
       picocolors: 1.1.1
+    optional: true
 
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
 
-  util-deprecate@1.0.2: {}
+  util-deprecate@1.0.2:
+    optional: true
 
   valibot@1.4.0(typescript@6.0.2):
     optionalDependencies:
@@ -3737,6 +3952,7 @@ snapshots:
       semver: 7.7.4
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   which@2.0.2:
     dependencies:
@@ -3744,15 +3960,19 @@ snapshots:
 
   word-wrap@1.2.5: {}
 
-  xml-name-validator@4.0.0: {}
+  xml-name-validator@4.0.0:
+    optional: true
 
   yaml-eslint-parser@2.0.0:
     dependencies:
       eslint-visitor-keys: 5.0.1
       yaml: 2.8.3
+    optional: true
 
-  yaml@2.8.3: {}
+  yaml@2.8.3:
+    optional: true
 
   yocto-queue@0.1.0: {}
 
-  zwitch@2.0.4: {}
+  zwitch@2.0.4:
+    optional: true

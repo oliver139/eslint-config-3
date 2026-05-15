@@ -2,7 +2,7 @@
   "name": "@oliver139/eslint-config",
   "type": "module",
   "version": "7.1.1",
-  "packageManager": "pnpm@11.1.1",
+  "packageManager": "pnpm@11.1.2",
   "description": " Oliver's ESLint config preset powered by @antfu/eslint-config",
   "author": "Oliver Mak <oliver139.working@gmail.com> (https://github.com/oliver139)",
   "license": "MIT",
@@ -40,10 +40,10 @@
     "eslint-plugin-better-tailwindcss": ">=4.5.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^8.3.0",
     "eslint": "^10.3.0"
   },
   "optionalDependencies": {
+    "@antfu/eslint-config": "^8.3.0",
     "eslint-plugin-better-tailwindcss": "^4.5.0"
   },
   "devDependencies": {
