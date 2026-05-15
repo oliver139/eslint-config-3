@@ -3,6 +3,7 @@
 name: Deploy config preview on release
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 
@@ -13,16 +14,16 @@ jobs:
     steps:
       # Check out the repository
       - name: Checkout Main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Install PNPM
       - name: Install PNPM
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           run_install: true
 
       - name: Set up Node.js 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
