@@ -2,7 +2,7 @@
   "name": "@oliver139/eslint-config",
   "type": "module",
   "version": "7.1.1",
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.1.1",
   "description": " Oliver's ESLint config preset powered by @antfu/eslint-config",
   "author": "Oliver Mak <oliver139.working@gmail.com> (https://github.com/oliver139)",
   "license": "MIT",
@@ -53,7 +53,7 @@
     "typescript": "^6.0.2"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "pnpm dlx lint-staged"
   },
   "lint-staged": {
     "*": "eslint --cache --fix"
