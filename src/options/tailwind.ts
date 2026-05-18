@@ -57,18 +57,38 @@ export function tailwindOptions(option: TailwindOptions): Linter.Config[] {
       name: 'oli/tailwindcss/rules',
       files: (_option as TailwindOptions).files ?? ['**/*.vue', '**/*.html'],
       rules: {
-        'better-tailwindcss/enforce-consistent-line-wrapping': 'warn',
+        'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+        'better-tailwindcss/enforce-logical-properties': 'off',
+        'better-tailwindcss/no-unknown-classes': 'off',
+        'better-tailwindcss/no-restricted-classes': 'off',
+
         'better-tailwindcss/enforce-consistent-class-order': 'warn',
         'better-tailwindcss/enforce-consistent-variant-order': 'warn',
-        'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
-        'better-tailwindcss/enforce-consistent-important-position': 'warn',
-        'better-tailwindcss/enforce-shorthand-classes': 'warn',
-        // 'better-tailwindcss/enforce-logical-properties': 'warn',
-        'better-tailwindcss/enforce-canonical-classes': 'warn',
         'better-tailwindcss/no-duplicate-classes': 'warn',
-        'better-tailwindcss/no-deprecated-classes': 'warn',
         'better-tailwindcss/no-unnecessary-whitespace': 'warn',
+
         'better-tailwindcss/no-conflicting-classes': 'error',
+
+        ...isTailwindOptionsV3(_option)
+          ? {
+              'better-tailwindcss/no-deprecated-classes': 'off',
+              'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
+              'better-tailwindcss/enforce-consistent-important-position': ['warn', { position: 'legacy' }],
+              'better-tailwindcss/enforce-shorthand-classes': 'warn',
+              'better-tailwindcss/enforce-canonical-classes': 'off',
+            }
+          : {},
+
+        ...isTailwindOptionsV4(_option)
+          ? {
+              'better-tailwindcss/no-deprecated-classes': 'warn',
+              'better-tailwindcss/enforce-consistent-variable-syntax': 'off',
+              'better-tailwindcss/enforce-consistent-important-position': 'off',
+              'better-tailwindcss/enforce-shorthand-classes': 'off',
+              'better-tailwindcss/enforce-canonical-classes': 'warn',
+            }
+          : {},
+
         ...(_option as TailwindOptions).overrides,
       },
     },
