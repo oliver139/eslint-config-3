@@ -22,6 +22,7 @@ export type TailwindRules
 interface BaseOptions {
   files?: Linter.Config['files']
   overrides?: Partial<Record<TailwindRules, Linter.RuleEntry>>
+  [extraKeys: string]: any
 }
 interface TailwindOptionsV3 extends BaseOptions {
   tailwindConfig: string
@@ -32,6 +33,7 @@ interface TailwindOptionsV4 extends BaseOptions {
   tailwindConfig?: never
 }
 export type TailwindOptions = TailwindOptionsV3 | TailwindOptionsV4
+
 function isTailwindOptionsV3(option: object): option is TailwindOptionsV3 {
   return (option as TailwindOptionsV3).tailwindConfig !== undefined
 }
@@ -41,6 +43,7 @@ function isTailwindOptionsV4(option: object): option is TailwindOptionsV4 {
 
 export function tailwindOptions(option: TailwindOptions): Linter.Config[] {
   const _option = typeof option === 'object' ? option : {}
+  const { files, overrides, ...settings } = typeof option === 'object' ? option : {}
 
   return [
     {
@@ -48,14 +51,13 @@ export function tailwindOptions(option: TailwindOptions): Linter.Config[] {
       plugins: eslintPluginBetterTailwindcss.configs.recommended.plugins,
       settings: {
         'better-tailwindcss': {
-          ...isTailwindOptionsV3(_option) ? { tailwindConfig: _option.tailwindConfig } : {},
-          ...isTailwindOptionsV4(_option) ? { entryPoint: _option.entryPoint } : {},
+          ...settings,
         },
       },
     },
     {
       name: 'oli/tailwindcss/rules',
-      files: (_option as TailwindOptions).files ?? ['**/*.vue', '**/*.html'],
+      files: files ?? ['**/*.vue', '**/*.html'],
       rules: {
         'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
         'better-tailwindcss/enforce-logical-properties': 'off',
@@ -89,7 +91,7 @@ export function tailwindOptions(option: TailwindOptions): Linter.Config[] {
             }
           : {},
 
-        ...(_option as TailwindOptions).overrides,
+        ...overrides,
       },
     },
   ]

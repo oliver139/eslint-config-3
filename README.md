@@ -41,16 +41,18 @@ import { options } from '@oliver139/eslint-config'
 
 export default antfu(...options({
   tailwind: {
-    // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
-    entryPoint: 'src/global.css',
-    // tailwindcss 3: the path to the tailwind config file (eg: `tailwind.config.js`)
-    tailwindConfig: 'tailwind.config.js',
     // File to be watched, below is the default value
     files: ['**/*.vue', '**/*.html'],
     // To overrides rules:
     overrides: {
       'better-tailwindcss/enforce-logical-properties': 'error',
-    }
+    },
+    // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
+    entryPoint: 'src/global.css',
+    // tailwindcss 3: the path to the tailwind config file (eg: `tailwind.config.js`)
+    tailwindConfig: 'tailwind.config.js',
+
+    // ...other settings (https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md)
   },
 }))
 ```
