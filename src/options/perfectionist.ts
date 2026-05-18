@@ -1,6 +1,8 @@
 import type { Options } from '.'
 
 export function perfectionistOptions(option: Options['perfectionist']): Options['perfectionist'] {
+  if (option === false) return false
+
   const { overrides } = typeof option === 'object' ? option : {}
 
   return {

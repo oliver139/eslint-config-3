@@ -41,7 +41,9 @@ function isTailwindOptionsV4(option: object): option is TailwindOptionsV4 {
   return (option as TailwindOptionsV4).entryPoint !== undefined
 }
 
-export function tailwindOptions(option: TailwindOptions): Linter.Config[] {
+export function tailwindOptions(option: TailwindOptions | false): Linter.Config[] {
+  if (option === false) return []
+
   const _option = typeof option === 'object' ? option : {}
   const { files, overrides, ...settings } = typeof option === 'object' ? option : {}
 
