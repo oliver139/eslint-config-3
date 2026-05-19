@@ -9,23 +9,13 @@ export function perfectionistOptions(option: Options['perfectionist']): Options[
     overrides: {
       'perfectionist/sort-imports': ['error', {
         groups: [
-          'type',
-          [
-            'type-parent',
-            'type-sibling',
-            'type-index',
-          ],
-          'builtin',
-          'external',
-          [
-            'internal',
-            'type-internal',
-          ],
-          [
-            'parent',
-            'sibling',
-            'index',
-          ],
+          'type-import',
+          ['type-parent', 'type-sibling', 'type-index', 'type-internal'],
+
+          'value-builtin',
+          'value-external',
+          'value-internal',
+          ['value-parent', 'value-sibling', 'value-index'],
           'side-effect',
           'ts-equals-import',
           'unknown',
