@@ -7,12 +7,12 @@ export function stylisticOptions(option: Options['stylistic']): Options['stylist
 
   const _option = typeof option === 'object' ? option : {}
   return {
+    braceStyle: '1tbs',
     ..._option,
     overrides: {
       'antfu/curly': 'off',
       'antfu/if-newline': 'off',
       curly: ['error', 'multi-line', 'consistent'],
-      'style/brace-style': ['error', '1tbs', { allowSingleLine: false }],
       'style/member-delimiter-style': ['error', {
         multiline: {
           delimiter: 'none',
