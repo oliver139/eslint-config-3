@@ -71,5 +71,5 @@ import antfu from '@antfu/eslint-config'
 import { options } from '@oliver139/eslint-config'
 import nuxt from './.nuxt/eslint.config.mjs'
 
-export default antfu(...options()).append(nuxt())
+export default nuxt(antfu(...options()))
 ```
