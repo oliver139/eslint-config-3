@@ -61,7 +61,15 @@ export function tailwindOptions(option: TailwindOptions | false): Linter.Config[
       name: 'oli/tailwindcss/rules',
       files: files ?? ['**/*.vue', '**/*.html'],
       rules: {
-        'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+        'better-tailwindcss/enforce-consistent-line-wrapping': [
+          'warn',
+          {
+            printWidth: 0,
+            classesPerLine: 5,
+            // group: 'emptyLine',
+            preferSingleLine: true,
+          },
+        ],
         'better-tailwindcss/enforce-logical-properties': 'off',
         'better-tailwindcss/no-unknown-classes': 'off',
         'better-tailwindcss/no-restricted-classes': 'off',

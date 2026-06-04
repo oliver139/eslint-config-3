@@ -32,7 +32,6 @@ export function options(options: Options = {}, ...userConfigs: UserConfig[]): [O
     stylistic: stylisticOptions(stylistic),
     perfectionist: perfectionistOptions(perfectionist),
     ...rest,
-
   }
 
   return [
