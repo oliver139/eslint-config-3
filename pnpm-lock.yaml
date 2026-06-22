@@ -14,9 +14,6 @@ importers:
       eslint:
         specifier: ^10.3.0
         version: 10.3.0(jiti@2.7.0)
-      eslint-plugin-better-tailwindcss:
-        specifier: '>=4.5.0'
-        version: 4.5.0(eslint@10.3.0(jiti@2.7.0))(tailwindcss@4.3.0)(typescript@6.0.3)
     devDependencies:
       '@antfu/ni':
         specifier: latest
@@ -30,6 +27,10 @@ importers:
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
+    optionalDependencies:
+      eslint-plugin-better-tailwindcss:
+        specifier: ^4.5.0
+        version: 4.5.0(eslint@10.3.0(jiti@2.7.0))(tailwindcss@4.3.0)(typescript@6.0.3)
 
 packages:
 
@@ -1854,6 +1855,7 @@ snapshots:
     dependencies:
       mdn-data: 2.28.0
       source-map-js: 1.2.1
+    optional: true
 
   '@eslint/markdown@8.0.1':
     dependencies:
@@ -2132,6 +2134,7 @@ snapshots:
   '@valibot/to-json-schema@1.7.0(valibot@1.4.0(typescript@6.0.3))':
     dependencies:
       valibot: 1.4.0(typescript@6.0.3)
+    optional: true
 
   '@vitest/eslint-plugin@1.6.17(@typescript-eslint/eslint-plugin@8.59.3(@typescript-eslint/parser@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
@@ -2192,6 +2195,7 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+    optional: true
 
   ansis@4.3.0: {}
 
@@ -2235,6 +2239,7 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    optional: true
 
   change-case@5.4.4: {}
 
@@ -2249,8 +2254,10 @@ snapshots:
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
+    optional: true
 
-  color-name@1.1.4: {}
+  color-name@1.1.4:
+    optional: true
 
   commander@8.3.0: {}
 
@@ -2360,6 +2367,7 @@ snapshots:
     transitivePeerDependencies:
       - '@eslint/css'
       - typescript
+    optional: true
 
   eslint-plugin-command@3.5.2(@typescript-eslint/rule-tester@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@6.0.3))(@typescript-eslint/utils@8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.3.0(jiti@2.7.0)):
     dependencies:
@@ -2675,7 +2683,8 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  has-flag@4.0.0: {}
+  has-flag@4.0.0:
+    optional: true
 
   hookable@6.1.1: {}
 
@@ -2703,7 +2712,8 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jiti@2.7.0: {}
+  jiti@2.7.0:
+    optional: true
 
   jsdoc-type-pratt-parser@7.1.1: {}
 
@@ -2717,7 +2727,8 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
-  json5@2.2.3: {}
+  json5@2.2.3:
+    optional: true
 
   jsonc-eslint-parser@3.1.0:
     dependencies:
@@ -2883,7 +2894,8 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdn-data@2.28.0: {}
+  mdn-data@2.28.0:
+    optional: true
 
   micromark-core-commonmark@2.0.3:
     dependencies:
@@ -3097,7 +3109,8 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.6
 
-  minimist@1.2.8: {}
+  minimist@1.2.8:
+    optional: true
 
   mlly@1.8.2:
     dependencies:
@@ -3287,21 +3300,25 @@ snapshots:
 
   spdx-license-ids@3.0.23: {}
 
-  strip-bom@3.0.0: {}
+  strip-bom@3.0.0:
+    optional: true
 
   strip-indent@4.1.1: {}
 
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+    optional: true
 
   synckit@0.11.12:
     dependencies:
       '@pkgr/core': 0.2.9
 
-  tailwind-csstree@0.3.1: {}
+  tailwind-csstree@0.3.1:
+    optional: true
 
-  tailwindcss@4.3.0: {}
+  tailwindcss@4.3.0:
+    optional: true
 
   tapable@2.3.3: {}
 
@@ -3333,12 +3350,14 @@ snapshots:
       enhanced-resolve: 5.21.3
       tapable: 2.3.3
       tsconfig-paths: 4.2.0
+    optional: true
 
   tsconfig-paths@4.2.0:
     dependencies:
       json5: 2.2.3
       minimist: 1.2.8
       strip-bom: 3.0.0
+    optional: true
 
   tsdown@0.21.10(synckit@0.11.12)(typescript@6.0.3):
     dependencies:
@@ -3428,6 +3447,7 @@ snapshots:
   valibot@1.4.0(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
+    optional: true
 
   vue-eslint-parser@10.4.0(eslint@10.3.0(jiti@2.7.0)):
     dependencies:

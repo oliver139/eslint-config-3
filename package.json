@@ -36,20 +36,18 @@
     "ncu": "nlx npm-check-updates"
   },
   "peerDependencies": {
-    "@antfu/eslint-config": ">=8.1.0",
-    "eslint-plugin-better-tailwindcss": ">=4.5.0"
+    "@antfu/eslint-config": ">=8.1.0"
   },
   "peerDependenciesMeta": {
     "@antfu/eslint-config": {
       "optional": true
-    },
-    "eslint-plugin-better-tailwindcss": {
-      "optional": true
     }
-
   },
   "dependencies": {
     "eslint": "^10.3.0"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-better-tailwindcss": "^4.5.0"
   },
   "devDependencies": {
     "@antfu/ni": "latest",
@@ -58,7 +56,7 @@
     "typescript": "^6.0.2"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm dlx lint-staged"
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*": "eslint --cache --fix"
