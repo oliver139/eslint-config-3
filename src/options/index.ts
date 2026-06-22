@@ -16,7 +16,6 @@ export function options(options: Options = {}, ...userConfigs: UserConfig[]): [O
   const {
     javascript,
     typescript,
-    pnpm,
     vue,
     stylistic,
     perfectionist,
@@ -31,6 +30,9 @@ export function options(options: Options = {}, ...userConfigs: UserConfig[]): [O
     vue: vueOptions(vue),
     stylistic: stylisticOptions(stylistic),
     perfectionist: perfectionistOptions(perfectionist),
+    pnpm: {
+      yaml: false,
+    },
     ...rest,
   }
 
