@@ -10,5 +10,3 @@ trustPolicyExclude:
 
 onlyBuiltDependencies:
   - esbuild
-
-useNodeVersion: 24.14.1

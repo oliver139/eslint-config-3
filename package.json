@@ -2,7 +2,7 @@
   "name": "@oliver139/eslint-config",
   "type": "module",
   "version": "7.5.4",
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.25.0",
   "description": " Oliver's ESLint config preset powered by @antfu/eslint-config",
   "author": "Oliver Mak <oliver139.working@gmail.com> (https://github.com/oliver139)",
   "license": "MIT",
@@ -25,6 +25,26 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": "^24.18.1",
+    "runtime": {
+      "name": "node",
+      "version": "^24.18.1",
+      "onFail": "download"
+    }
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.18.1",
+      "onFail": "download"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.25.0",
+      "onFail": "download"
+    }
+  },
   "scripts": {
     "prepare": "simple-git-hooks",
     "dev": "nlx @eslint/config-inspector --config eslint.config.ts",
@@ -36,7 +56,7 @@
     "ncu": "nlx npm-check-updates"
   },
   "peerDependencies": {
-    "@antfu/eslint-config": ">=8.1.0"
+    "@antfu/eslint-config": ">=9.3.0"
   },
   "peerDependenciesMeta": {
     "@antfu/eslint-config": {
@@ -44,14 +64,14 @@
     }
   },
   "dependencies": {
-    "eslint": "^10.3.0"
+    "eslint": "^10.9.1"
   },
   "optionalDependencies": {
-    "eslint-plugin-better-tailwindcss": "^4.5.0"
+    "eslint-plugin-better-tailwindcss": "^4.7.0"
   },
   "devDependencies": {
     "@antfu/ni": "latest",
-    "simple-git-hooks": "^2.13.1",
+    "simple-git-hooks": "^2.14.0",
     "tsdown": "^0.21.10",
     "typescript": "^6.0.2"
   },
