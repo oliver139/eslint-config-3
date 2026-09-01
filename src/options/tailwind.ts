@@ -59,7 +59,7 @@ export function tailwindOptions(option: TailwindOptions | false): Linter.Config[
     },
     {
       name: 'oli/tailwindcss/rules',
-      files: files ?? ['**/*.vue', '**/*.html'],
+      files: files ?? ['**/*.vue'],
       rules: {
         'better-tailwindcss/enforce-consistent-line-wrapping': [
           'warn',
