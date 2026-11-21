@@ -2,11 +2,16 @@ import type { Options } from '.'
 import type { Severity } from '@/types'
 
 export function javascriptOptions(option: Options['javascript'], noUnsedVars: Severity = 'warn'): Options['javascript'] {
-  const { overrides } = typeof option === 'object' ? option : {}
+  const { overrides } = typeof option === 'object'
+    ? option
+    : {}
   return {
     overrides: {
       'antfu/no-top-level-await': 'warn',
-      'max-nested-callbacks': ['warn', { max: 4 }],
+      'max-nested-callbacks': [
+        'warn',
+        { max: 4 },
+      ],
       'no-alert': 'off',
       'no-console': 'off',
       'no-useless-return': 'warn',

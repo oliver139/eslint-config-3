@@ -5,7 +5,9 @@ export function stylisticOptions(option: Options['stylistic']): Options['stylist
     return false
   }
 
-  const _option = typeof option === 'object' ? option : {}
+  const _option = typeof option === 'object'
+    ? option
+    : {}
   return {
     braceStyle: '1tbs',
     ..._option,
@@ -13,24 +15,27 @@ export function stylisticOptions(option: Options['stylistic']): Options['stylist
       'antfu/curly': 'off',
       'antfu/if-newline': 'off',
       curly: ['error', 'multi-line', 'consistent'],
-      'style/member-delimiter-style': ['error', {
-        multiline: {
-          delimiter: 'none',
-          requireLast: false,
-        },
-        multilineDetection: 'brackets',
-        overrides: {
-          interface: {
-            multiline: {
-              delimiter: 'none',
-              requireLast: false,
+      'style/member-delimiter-style': [
+        'error',
+        {
+          multiline: {
+            delimiter: 'none',
+            requireLast: false,
+          },
+          multilineDetection: 'brackets',
+          overrides: {
+            interface: {
+              multiline: {
+                delimiter: 'none',
+                requireLast: false,
+              },
             },
           },
+          singleline: {
+            delimiter: 'comma',
+          },
         },
-        singleline: {
-          delimiter: 'comma',
-        },
-      }],
+      ],
       'style/quote-props': ['error', 'as-needed'],
       ..._option.overrides,
     },

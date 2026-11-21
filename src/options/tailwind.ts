@@ -44,8 +44,12 @@ function isTailwindOptionsV4(option: object): option is TailwindOptionsV4 {
 export function tailwindOptions(option: TailwindOptions | false): Linter.Config[] {
   if (option === false) return []
 
-  const _option = typeof option === 'object' ? option : {}
-  const { files, overrides, ...settings } = typeof option === 'object' ? option : {}
+  const _option = typeof option === 'object'
+    ? option
+    : {}
+  const { files, overrides, ...settings } = typeof option === 'object'
+    ? option
+    : {}
 
   return [
     {
@@ -85,7 +89,10 @@ export function tailwindOptions(option: TailwindOptions | false): Linter.Config[
           ? {
               'better-tailwindcss/no-deprecated-classes': 'off',
               'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
-              'better-tailwindcss/enforce-consistent-important-position': ['warn', { position: 'legacy' }],
+              'better-tailwindcss/enforce-consistent-important-position': [
+                'warn',
+                { position: 'legacy' },
+              ],
               'better-tailwindcss/enforce-shorthand-classes': 'warn',
               'better-tailwindcss/enforce-canonical-classes': 'off',
             }
