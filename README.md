@@ -11,7 +11,7 @@ Tailwind linting is supported using [`eslint-plugin-better-tailwindcss`](https:/
 ## Install
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
+npm install -D eslint @oliver139/eslint-config@9 @antfu/eslint-config
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Set `typescript: false` to disable the TypeScript preset. To configure it, pass 
 Powered by [`eslint-plugin-better-tailwindcss`](https://github.com/schoero/eslint-plugin-better-tailwindcss)
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config eslint-plugin-better-tailwindcss
+npm install -D eslint @oliver139/eslint-config@9 @antfu/eslint-config eslint-plugin-better-tailwindcss
 ```
 
 ```ts
@@ -68,7 +68,7 @@ export default antfu(...antfuOptions({
 Powered by [Nuxt ESLint module](https://eslint.nuxt.com/packages/module)
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
+npm install -D eslint @oliver139/eslint-config@9 @antfu/eslint-config
 npx nuxi module add eslint
 ```
 
