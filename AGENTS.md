@@ -6,7 +6,7 @@
 
 - Edit the matching module in `src/antfuOptions/` for JavaScript, TypeScript, Vue, stylistic rules, import sorting (`perfectionist.ts`), or Tailwind. Keep consumer rule overrides after preset defaults so consumers can replace individual rules.
 - Use `src/antfuOptions/index.ts` for option types and assembly. Keep Antfu options first in the tuple returned by `antfuOptions()`, followed by optional Tailwind configurations and then caller-supplied configurations. The package entry point also exports `antfuOptions` under its original name, `options`, for backward compatibility.
-- Implement custom ESLint rules in `src/oliRules/` and wire their options through `src/oliRules/index.ts`.
+- Implement custom ESLint rules in `src/oliRules/` and wire their options through `src/oliRules/index.ts`. The package entry point exposes `antfuOptions` and `oli` as named functions and as properties of the default export.
 - For Tailwind changes, check both the v3 `tailwindConfig` and v4 `entryPoint` paths. The plugin setup and the file-scoped rules are separate entries. The rules default to Vue files.
 - Update `README.md` when a change affects installation, a public option, or a documented default. Edit the source under `src/`. Running `pnpm build` generates the ESM bundle and type declarations in `dist/`.
 

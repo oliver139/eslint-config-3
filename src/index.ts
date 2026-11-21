@@ -1,4 +1,5 @@
 import { antfuOptions } from './antfuOptions'
+import { oli } from './oliRules'
 
 export * from './antfuOptions'
 export * from './oliRules'
@@ -8,4 +9,4 @@ export * from './oliRules'
  */
 export const options = antfuOptions
 
-export default antfuOptions
+export default { antfuOptions, oli }

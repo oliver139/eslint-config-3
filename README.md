@@ -18,7 +18,7 @@ npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
 
 ### Normal
 
-The named export `options` is deprecated and remains available for backward compatibility. To migrate, rename your import and calls from `options` to `antfuOptions`.
+`antfuOptions` and `oli` are available as named exports and as properties of the default export. The named export `options` is deprecated and remains available for backward compatibility. To migrate, rename your import and calls from `options` to `antfuOptions`.
 
 ```ts
 import antfu from '@antfu/eslint-config'
