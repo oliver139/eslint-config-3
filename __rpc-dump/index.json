@@ -1,10 +1,27 @@
 {
+  "devframe:rpc:server-state:get": {
+    "type": "query",
+    "records": {
+      "0wWotY2OBO0PnkEl4IPZgKz0xGnl4voKUXSnW7N3UTw": "__rpc-dump/devframe~rpc~server-state~get.record.0wWotY2OBO0PnkEl4IPZgKz0xGnl4voKUXSnW7N3UTw.json",
+      "oArObT_iFRD5NO-ZrSCjh90aceN8NK9Vb6_eKVGK9Gk": "__rpc-dump/devframe~rpc~server-state~get.record.oArObT_iFRD5NO-ZrSCjh90aceN8NK9Vb6_eKVGK9Gk.json"
+    },
+    "serialization": "structured-clone",
+    "fallback": "__rpc-dump/devframe~rpc~server-state~get.fallback.json"
+  },
   "eslint-config-inspector:get-payload": {
     "type": "query",
     "records": {
       "T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU": "__rpc-dump/eslint-config-inspector~get-payload.record.T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU.json"
     },
-    "serialization": "json",
+    "serialization": "structured-clone",
     "fallback": "__rpc-dump/eslint-config-inspector~get-payload.fallback.json"
+  },
+  "eslint-config-inspector:get-stats": {
+    "type": "query",
+    "records": {
+      "T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU": "__rpc-dump/eslint-config-inspector~get-stats.record.T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU.json"
+    },
+    "serialization": "structured-clone",
+    "fallback": "__rpc-dump/eslint-config-inspector~get-stats.fallback.json"
   }
 }

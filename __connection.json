@@ -4,6 +4,6 @@
     "devframe:agent:list-tools",
     "devframe:agent:list-resources",
     "devframe:agent:read-resource",
-    "eslint-config-inspector:get-payload"
+    "devframe:agent:sync-client-tools"
   ]
 }
