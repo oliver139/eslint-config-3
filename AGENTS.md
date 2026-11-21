@@ -16,6 +16,8 @@ Use the Node.js and pnpm versions declared in `package.json`. Install dependenci
 
 - Run `pnpm lint` to check the repository against its own preset.
 - For TypeScript or public API changes, run `pnpm exec tsc --noEmit` and `pnpm build`.
+- Write all test files in TypeScript using the `.ts` extension.
+- Run `pnpm test` to build the package and exercise its custom rules through ESLint.
 - For rule changes, use `pnpm exec eslint --print-config src/index.ts` to inspect the effective TypeScript rules. Substitute a matching path such as `Example.vue` for Vue or Tailwind rules. Use `pnpm dev` to explore the configuration in ESLint Config Inspector.
 
 ## Cloudflare

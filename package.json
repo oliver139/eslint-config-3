@@ -51,6 +51,7 @@
     "build": "tsdown --clean --dts",
     "lint": "eslint --cache",
     "lint:fix": "eslint --cache --fix",
+    "test": "pnpm build && node --test",
     "prepack": "nr build",
     "release": "nlx bumpp && pnpm publish",
     "ncu": "nlx npm-check-updates"
@@ -71,6 +72,7 @@
   },
   "devDependencies": {
     "@antfu/ni": "latest",
+    "@types/node": "^26.4.0",
     "simple-git-hooks": "^2.14.0",
     "tsdown": "^0.23.3",
     "typescript": "^6.0.2"

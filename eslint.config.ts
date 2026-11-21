@@ -9,6 +9,9 @@ export default antfu(...antfuOptions({
   tailwind: {
     entryPoint: 'app/assets/css/main.css',
   },
+  test: {
+    overrides: { 'test/no-import-node-test': 'off' },
+  },
 })).append(oli({
   nuxt: {
     preferAtAlias: true,

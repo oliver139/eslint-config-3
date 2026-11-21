@@ -5,8 +5,10 @@
     "moduleResolution": "Bundler",
     "paths": {
       "@/*": ["./src/*"],
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@oliver139/eslint-config": ["./src/index.ts"]
     },
+    "types": ["node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
