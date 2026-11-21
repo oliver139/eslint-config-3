@@ -16,7 +16,7 @@ export type Options = Omit<NonNullable<AntfuFirstPara>, 'vue'> & {
 }
 export type UserConfig = Parameters<typeof antfu>[1]
 
-export function options(options: Options = {}, ...userConfigs: UserConfig[]): [Options, ...UserConfig[]] {
+export function antfuOptions(options: Options = {}, ...userConfigs: UserConfig[]): [Options, ...UserConfig[]] {
   const {
     javascript,
     typescript,

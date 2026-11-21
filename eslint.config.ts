@@ -1,8 +1,8 @@
 import antfu from '@antfu/eslint-config'
 
-import { options } from './src'
+import { antfuOptions } from './src'
 
-export default antfu(...options({
+export default antfu(...antfuOptions({
   pnpm: {
     yaml: false,
   },

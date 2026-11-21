@@ -18,11 +18,13 @@ npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
 
 ### Normal
 
+The named export `options` is deprecated and remains available for backward compatibility. To migrate, rename your import and calls from `options` to `antfuOptions`.
+
 ```ts
 import antfu from '@antfu/eslint-config'
-import { options } from '@oliver139/eslint-config'
+import { antfuOptions } from '@oliver139/eslint-config'
 
-export default antfu(...options({
+export default antfu(...antfuOptions({
   // Options from @antfu/eslint-config
 }))
 ```
@@ -41,9 +43,9 @@ npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config eslint-plu
 
 ```ts
 import antfu from '@antfu/eslint-config'
-import { options } from '@oliver139/eslint-config'
+import { antfuOptions } from '@oliver139/eslint-config'
 
-export default antfu(...options({
+export default antfu(...antfuOptions({
   tailwind: {
     // File to be watched, below is the default value
     files: ['**/*.vue'],
@@ -72,8 +74,8 @@ npx nuxi module add eslint
 
 ```ts
 import antfu from '@antfu/eslint-config'
-import { options } from '@oliver139/eslint-config'
+import { antfuOptions } from '@oliver139/eslint-config'
 import nuxt from './.nuxt/eslint.config.mjs'
 
-export default nuxt(antfu(...options()))
+export default nuxt(antfu(...antfuOptions()))
 ```

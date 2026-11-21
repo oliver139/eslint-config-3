@@ -1,5 +1,10 @@
-import { options } from './options'
+import { antfuOptions } from './antfuOptions'
 
-export * from './options'
+export * from './antfuOptions'
 
-export default options
+/**
+ * @deprecated Use {@link antfuOptions} instead.
+ */
+export const options = antfuOptions
+
+export default antfuOptions
