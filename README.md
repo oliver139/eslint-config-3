@@ -11,7 +11,7 @@ Tailwind linting is supported using [`eslint-plugin-better-tailwindcss`](https:/
 ## Install
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config
+npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ export default antfu(...options({
 Powered by [`eslint-plugin-better-tailwindcss`](https://github.com/schoero/eslint-plugin-better-tailwindcss)
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config eslint-plugin-better-tailwindcss
+npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config eslint-plugin-better-tailwindcss
 ```
 
 ```ts
@@ -42,7 +42,7 @@ import { options } from '@oliver139/eslint-config'
 export default antfu(...options({
   tailwind: {
     // File to be watched, below is the default value
-    files: ['**/*.vue', '**/*.html'],
+    files: ['**/*.vue'],
     // To overrides rules:
     overrides: {
       'better-tailwindcss/enforce-logical-properties': 'error',
@@ -62,7 +62,7 @@ export default antfu(...options({
 Powered by [Nuxt ESLint module](https://eslint.nuxt.com/packages/module)
 
 ```sh
-npm install -D eslint @oliver139/eslint-config@7 @antfu/eslint-config
+npm install -D eslint @oliver139/eslint-config@8 @antfu/eslint-config
 npx nuxi module add eslint
 ```
 
