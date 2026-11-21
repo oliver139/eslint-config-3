@@ -27,6 +27,10 @@ export default antfu(...options({
 }))
 ```
 
+### TypeScript
+
+Set `typescript: false` to disable the TypeScript preset. To configure it, pass Antfu's TypeScript options. Rules in `typescript.overrides` take precedence over this preset's defaults.
+
 ### Tailwind
 
 Powered by [`eslint-plugin-better-tailwindcss`](https://github.com/schoero/eslint-plugin-better-tailwindcss)
