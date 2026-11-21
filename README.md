@@ -79,3 +79,22 @@ import nuxt from './.nuxt/eslint.config.mjs'
 
 export default nuxt(antfu(...antfuOptions()))
 ```
+
+## My Custom Options
+
+To enable my custom options, append it to `antfu()`
+
+```ts
+import antfu from '@antfu/eslint-config'
+import { antfuOptions, oli } from '@oliver139/eslint-config'
+import nuxt from './.nuxt/eslint.config.mjs'
+
+export default antfu(...antfuOptions()).append(oli({ /* My custom options */ }))
+```
+
+### `nuxt.preferAtAlias`
+
+- default: `false`
+- auto-fix: yes
+
+Mainly for Nuxt project. It prefers relative paths to start with `@` instead of `~`.

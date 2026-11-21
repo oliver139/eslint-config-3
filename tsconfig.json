@@ -3,7 +3,10 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "paths": { "@/*": ["./src/*"] },
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./src/*"]
+    },
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true

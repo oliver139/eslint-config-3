@@ -1,6 +1,6 @@
 import antfu from '@antfu/eslint-config'
 
-import { antfuOptions } from './src'
+import { antfuOptions, oli } from './src'
 
 export default antfu(...antfuOptions({
   pnpm: {
@@ -8,5 +8,9 @@ export default antfu(...antfuOptions({
   },
   tailwind: {
     entryPoint: 'app/assets/css/main.css',
+  },
+})).append(oli({
+  nuxt: {
+    preferAtAlias: true,
   },
 }))
